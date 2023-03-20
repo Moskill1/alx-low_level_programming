@@ -10,11 +10,11 @@
 * Description: Longer description
 */
 	struct dog
-	{
-	char *name;
-	float age;
-	char *owner;
-	};
+		{
+		char *name;
+		float age;
+		char *owner;
+		};
 
 
 /**
