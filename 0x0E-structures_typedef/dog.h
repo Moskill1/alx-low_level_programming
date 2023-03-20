@@ -8,19 +8,16 @@
 * @age: Second member
 * @owner: Third member
 * Description: Longer description
+* dog_t - typedef for struct dog
 */
 
-		struct dog
+		typedef struct dog
 
 		{
 		char *name;
 		float age;
 		char *owner;
-		};
-
-/**
-* dog_t - typedef for struct dog
-*/
+		} dog_t;
 
 		typedef struct dog dog_t;
 
