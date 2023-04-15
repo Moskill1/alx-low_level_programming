@@ -179,14 +179,8 @@ void print_osabi(unsigned char *e_ident)
 /**
  * print_abi - Prints the ABI version of an ELF header.
  * @e_ident: A pointer to an array containing the ELF ABI version.
- * Ignore 5 functions limit for this file
- *  betty-doc-end
  */
-void print_abi
-unsigned char
-	{
-	*e_ident
-	}
+void print_abi(unsigned char *e_ident)
 {
 	printf(" ABI Version: %d\n",
 		e_ident[EI_ABIVERSION]);
