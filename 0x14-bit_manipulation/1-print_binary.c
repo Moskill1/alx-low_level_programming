@@ -4,21 +4,23 @@
  * print_binary - prints the binary equivalent of a decimal number
  * @n: number to print in binary
  */
-
 void print_binary(unsigned long int n)
 {
-int i;
-unsigned long int mask = 1UL << ((sizeof(unsigned long int) * 8) - 1);
+	int i, count = 0;
+	unsigned long int current;
 
-for (i = 0; i < sizeof(unsigned long int) * 8; i++)
-{
-if (n & mask)
-printf("1");
-else
-printf("0");
+	for (i = 63; i >= 0; i--)
+	{
+		current = n >> i;
 
-mask = mask >> 1;
-}
-
-printf("\n");
+		if (current & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
+	}
+	if (!count)
+		_putchar('0');
 }
